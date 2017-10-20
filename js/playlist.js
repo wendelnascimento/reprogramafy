@@ -84,7 +84,6 @@ console.log(playlist);
 
 var playlistUl = document.querySelector('#playlist ul');
 for(var i = 0; i < playlist.length; i++) {
-    console.log(playlist[i].name);
     var li = document.createElement('li'); // <li></li>
     var h3 = document.createElement('h3'); // <h3></h3>
     var spanAlbum = document.createElement('span'); // <span></span>
@@ -136,15 +135,11 @@ function mudarMusica() {
 
     var titulo = document.querySelector('.musica h1');
     titulo.innerText = playlist[id].name;
-
-    console.log(playlist[id]);
 }
 
 
 var pesquisaInput = document.querySelector('#pesquisa');
-pesquisaInput.onkeyup = function() {
-    console.log(this.value);
-    
+pesquisaInput.onkeyup = function() {  
     var lis = document.querySelectorAll('#playlist li');
     for (var i = 0; i < lis.length; i++) {
         var titulo = lis[i].querySelector('h3');

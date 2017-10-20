@@ -54,7 +54,7 @@ main {
   padding: 0 20px;
 }
 
-#modal {
+#modal, #modalCadastro {
   background: #fff;
   padding: 20px;
   text-align: center;
@@ -64,11 +64,11 @@ main {
   margin: auto;
 }
 
-#modal > img {
+#modal > img, #modalCadastro > img {
   width: 100px;
 }
 
-#fundo {
+#fundo, #fundoCadastro {
   position: fixed;
   top: 0;
   left: 0;
@@ -78,11 +78,11 @@ main {
   display: none;
 }
 
-#fundo.visivel {
+#fundo.visivel, #fundoCadastro.visivel {
   display: flex;
 }
 
-#fechar {
+#fechar, #fecharCadastro {
   color: #7f479a;
   background: transparent;
   border: none;
@@ -91,22 +91,22 @@ main {
   right: 10px;
 }
 
-#fechar:hover {
+#fechar:hover, #fecharCadastro:hover {
   cursor: pointer;
 }
 
-#modal > form {
+#modal > form, #modalCadastro > form {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-#modal > form > div {
+#modal > form > div, #modalCadastro > form > div {
   width: 100%;
   margin: 10px 0;
 }
 
-#modal > form > div > input {
+#modal > form > div > input, #modalCadastro > form > div > input {
   width: inherit;
   border: 1px solid #7f479a;
   padding: 5px 10px;
@@ -114,7 +114,7 @@ main {
   border-radius: 100px;
 }
 
-#modal > form > button {
+#modal > form > button, #modalCadastro > form > button {
   background: #7f469a;
   border: none;
   color: #fff;
@@ -122,7 +122,7 @@ main {
   border-radius: 100px;
 }
 
-#modal > form > button:hover {
+#modal > form > button:hover, #modalCadastro > form > button:hover {
   cursor: pointer;
 }
 

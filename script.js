@@ -28,7 +28,16 @@ form.onsubmit = function (e) {
     var modal = document.querySelector('#modal');
 
     // Verifica se o email e senha são permitidos
-    if(email.value !== 'admin@admin.com' || senha.value !== 'admin') {
+    var usuarios = JSON.parse(localStorage.usuarios);
+    var correto;
+    for (var i = 0; i < usuarios.length; i++) {
+        if (usuarios[i].email === email.value && usuarios[i].senha === senha.value) {
+            correto = true;
+            localStorage.usuario = usuarios[i].email;
+            break;
+        }
+    }
+    if(!correto) {
         // Adiciona classe de erro na modal pra mostrar um feedback
         modal.classList.add('erro');
 
